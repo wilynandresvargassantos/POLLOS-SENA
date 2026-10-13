@@ -1,6 +1,8 @@
 //este conecta con los datos .env
 //no es necesario pasarcelo a este archivo para protegerlos 
 //datos sencibles
+
+
 require('dotenv').config();
 
 const requiredEnvVars = ['DB_HOST', 'DB_USER', 'DB_PASSWORD', 'DB_NAME'];
