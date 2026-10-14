@@ -3,6 +3,7 @@ const cors = require('cors');
 const rutaacliente = require('./vista/admin/RutaCrearCliente');
 const rutaRegistroCliente = require('./vista/cliente/RutaRegistroCliente');
 const rutaLoginCliente = require('./vista/cliente/RutaLoginCliente');
+const rutaCrearTrabajador = require('./vista/admin/RutaCrearTrabajador');
 //const rutaadmin = require('./vista/AdminRutas');
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use('/', rutaacliente);
 app.use('/', rutaRegistroCliente);
 app.use('/', rutaLoginCliente);
+app.use('/', rutaCrearTrabajador);
 //app.use('/seguridad', rutaadmin);
 
 app.get('/', (req, res) => {
