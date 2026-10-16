@@ -4,6 +4,7 @@ const rutaacliente = require('./vista/admin/RutaCrearCliente');
 const rutaRegistroCliente = require('./vista/cliente/RutaRegistroCliente');
 const rutaLoginCliente = require('./vista/cliente/RutaLoginCliente');
 const rutaCrearTrabajador = require('./vista/admin/RutaCrearTrabajador');
+const rutaLoginTrabajador = require('./vista/trabajador/RutaLoginTrabajador');
 //const rutaadmin = require('./vista/AdminRutas');
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -25,6 +26,7 @@ app.use('/', rutaacliente);
 app.use('/', rutaRegistroCliente);
 app.use('/', rutaLoginCliente);
 app.use('/', rutaCrearTrabajador);
+app.use('/', rutaLoginTrabajador);
 //app.use('/seguridad', rutaadmin);
 
 app.get('/', (req, res) => {
