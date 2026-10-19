@@ -1,41 +1,34 @@
 const express = require('express');
 const cors = require('cors');
-const rutaAdminSeguridad = require('./vista/admin/RutaAdminSeguridad');
-const rutaacliente = require('./vista/admin/RutaCrearCliente');
-const rutaRegistroCliente = require('./vista/cliente/RutaRegistroCliente');
-const rutaLoginCliente = require('./vista/cliente/RutaLoginCliente');
-const rutaCrearTrabajador = require('./vista/admin/RutaCrearTrabajador');
-const rutaLoginTrabajador = require('./vista/trabajador/RutaLoginTrabajador');
-//const rutaadmin = require('./vista/AdminRutas');
+
+const RutasAdmin = require('./vista/admin/RutasAdmin');
+const RutasClientes = require('./vista/clientes/RutasClientes');
+const RutasTrabajadores = require('./vista/trabajadores/RutasTrabajadores');
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors({
-    origin: '*', // Cambiar ['http://tu.com', 'http://yo.com'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Métodos permitidos
-    allowedHeaders: ['Content-Type', 'Authorization'], // Encabezados permitidos
-    credentials: true // Habilita el envío de credenciales si es necesario
-  }));
+    origin: '*',
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true
+}));
 
-  // Middleware para parseo de solicitudes
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Rutas 
-app.use('/', rutaAdminSeguridad);
-app.use('/', rutaacliente);
-app.use('/', rutaRegistroCliente);
-app.use('/', rutaLoginCliente);
-app.use('/', rutaCrearTrabajador);
-app.use('/', rutaLoginTrabajador);
-//app.use('/seguridad', rutaadmin);
+// Rotas registradas
+app.use('/', RutasAdmin);
+app.use('/', RutasClientes);
+app.use('/', RutasTrabajadores);
 
 app.get('/', (req, res) => {
     res.send('API de Pollos funcionando correctamente');
 });
 
-// Iniciar el servidor
+// Inicialização do servidor
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
-  });
+});

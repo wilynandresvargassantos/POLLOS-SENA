@@ -1,31 +1,39 @@
-const modelo = require('../../modelo/cliente/LoginClienteModelo');
+const modelo = require('../../modelo/trabajadores/LoginTrabajadorModelo');
 
-class LoginClienteControlador {
+class LoginTrabajadorControlador {
     static async login(req, res) {
         const { t1: correo, t2: contras } = req.body;
 
         // ------------ Validaciones ------------
-        // 1. Campos obligatorios
-        const errorCampos = LoginClienteControlador.verCampos(correo, contras);
+        const errorCampos = LoginTrabajadorControlador.verCampos(correo, contras);
         if (errorCampos) {
             return res.status(400).json({ error: errorCampos });
         }
 
-        // 2. Formato de correo
-        const errorEmail = LoginClienteControlador.verEmail(correo);
+        const errorEmail = LoginTrabajadorControlador.verEmail(correo);
         if (errorEmail) {
             return res.status(400).json({ error: errorEmail });
         }
 
         try {
-            // Buscar si existe el cliente
-            const cliente = await modelo.buscarPorCorreo(correo);
-            if (!cliente) {
+            // 1. Verificar existencia
+            const trabajador = await modelo.buscarPorCorreo(correo);
+            if (!trabajador) {
                 return res.status(401).json({ error: 'Credenciales inválidas. Correo o contraseña incorrectos.' });
             }
 
-            // Comparar contraseña con bcrypt
-            const esValida = await modelo.verificarContrasena(contras, cliente.contrasena);
+            // 2. Verificar estado de la cuenta
+            if (trabajador.estado !== 'Activo') {
+                return res.status(403).json({ error: 'La cuenta no se encuentra habilitada para ingresar.' });
+            }
+
+            // 3. Verificar rol
+            if (trabajador.rol !== 'Trabajador') {
+                return res.status(403).json({ error: 'Acceso no autorizado para este módulo.' });
+            }
+
+            // 4. Verificar contraseña
+            const esValida = await modelo.verificarContrasena(contras, trabajador.contrasena);
             if (!esValida) {
                 return res.status(401).json({ error: 'Credenciales inválidas. Correo o contraseña incorrectos.' });
             }
@@ -34,8 +42,9 @@ class LoginClienteControlador {
             res.status(200).json({
                 mensaje: 'Inicio de sesión exitoso.',
                 usuario: {
-                    nombres: cliente.nombres,
-                    correo: cliente.correo
+                    nombres: trabajador.nombres,
+                    correo: trabajador.correo,
+                    rol: trabajador.rol
                 }
             });
         } catch (err) {
@@ -54,10 +63,10 @@ class LoginClienteControlador {
     static verEmail(email) {
         const er = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!er.test(email) || email.length > 250) {
-            return 'Correo inválido. Ejemplo válido: ejemplo@email.com';
+            return 'Correo inválido. Ejemplo válido: trabajador@email.com';
         }
         return null;
     }
 }
 
-module.exports = LoginClienteControlador;
+module.exports = LoginTrabajadorControlador;

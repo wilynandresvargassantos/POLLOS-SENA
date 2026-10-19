@@ -1,4 +1,4 @@
-const modelo = require('../../modelo/cliente/RegistroClienteModelo');
+const modelo = require('../../modelo/clientes/CrearClienteModelo');
 
 class RegistroClienteControlador {
     // Función para registrar nuevo cliente desde su propia cuenta
