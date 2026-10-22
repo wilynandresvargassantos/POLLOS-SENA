@@ -7,15 +7,19 @@ const ARutas = require('../../controlador/admin/CrearAdminControlador');
 const LRutas = require('../../controlador/admin/LoginAdminControlador');
 const EPRutas = require('../../controlador/admin/EditarProductoControlador');
 const DelPRutas = require('../../controlador/admin/EliminarProductoControlador');
+const MTRutas = require('../../controlador/admin/DesactivarTrabajadorControlador');
+const ATRutas = require('../../controlador/admin/ActivarTrabajadorControlador');
 
 // Endpoints de Administración con prefijo /seguridad
 router.post('/seguridad/crearCliente', CRutas.crearCliente); // RF01
 router.post('/seguridad/crearTrabajador', TRutas.crear);      // RF04
 router.post('/seguridad/crearAdmin', ARutas.crear);
 router.post('/seguridad/loginAdmin', LRutas.login);
-router.put('/seguridad/editarProducto/:idProducto', EPRutas.editar); // RF11
+router.put('/seguridad/editarProducto/:idProducto', EPRutas.editar);       // RF11
+router.delete('/seguridad/eliminarProducto/:idProducto', DelPRutas.eliminar); // RF12
 
-// RF-12: Admin elimina producto
-router.delete('/seguridad/eliminarProducto/:idProducto', DelPRutas.eliminar);
+// RF-13: Admin desactiva y activa trabajador
+router.put('/seguridad/desactivartrabajador/:id', MTRutas.modificarestado);
+router.put('/seguridad/activartrabajador/:id', ATRutas.modificarestado);
 
 module.exports = router;
