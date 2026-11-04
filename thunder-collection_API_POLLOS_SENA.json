@@ -1,0 +1,374 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "API_POLLOS_SENA",
+    "collectionId": "49116137-8e99-4ef1-8d42-03c914738d54",
+    "dateExported": "2026-11-04T17:04:03.774Z",
+    "version": "1.4",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "e1f39551-abb3-4491-a03c-d06891d888a4",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-01 Admin crea Cliente",
+            "url": "http://localhost:3000/seguridad/crearCliente",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2026-11-03T21:03:57.774Z",
+            "modified": "2026-11-03T21:03:57.775Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"Juan Perez Pollos\",\r",
+                    "  \"t2\": \"CC\",\r",
+                    "  \"t3\": \"1098765001\",\r",
+                    "  \"t4\": \"Calle 10 # 20-30\",\r",
+                    "  \"t5\": \"3101234567\",\r",
+                    "  \"t6\": \"juan.pollos@example.com\",\r",
+                    "  \"t7\": \"ClaveSegura*2026\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "93810a64-d59e-4114-80f3-32ef8ec3d277",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-02 Registro libre Cliente",
+            "url": "http://localhost:3000/registro-cliente",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2026-11-03T21:06:25.647Z",
+            "modified": "2026-11-03T21:06:25.647Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"1098765002\",\r",
+                    "  \"t2\": \"Maria Autoregistro Pollos\",\r",
+                    "  \"t3\": \"3119876543\",\r",
+                    "  \"t4\": \"maria.pollos@example.com\",\r",
+                    "  \"t5\": \"PollosClave*2026\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "8d12c90f-dd6a-4b0f-8d17-2b3754c85b99",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-03 Login Cliente",
+            "url": "http://localhost:3000/login-cliente",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2026-11-03T21:08:25.786Z",
+            "modified": "2026-11-03T21:08:25.786Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"maria.pollos@example.com\",\r",
+                    "  \"t2\": \"PollosClave*2026\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "6538ee91-f67a-4edc-a20e-91a6f3b1a8dc",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-04 Admin crea Trabajador",
+            "url": "http://localhost:3000/seguridad/crearTrabajador",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2026-11-03T21:09:59.581Z",
+            "modified": "2026-11-03T21:09:59.581Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"CC\",\r",
+                    "  \"t2\": \"1098765003\",\r",
+                    "  \"t3\": \"Pedro Operario Pollos\",\r",
+                    "  \"t4\": \"Carrera 15 # 40-50\",\r",
+                    "  \"t5\": \"3129876543\",\r",
+                    "  \"t6\": \"pedro.trabajador@pollos.com\",\r",
+                    "  \"t7\": \"Trabajador*2026\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "98541790-41fc-40dd-9f8c-5a897230b815",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-05 Login Trabajador",
+            "url": "http://localhost:3000/login-trabajador",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2026-11-03T21:12:16.469Z",
+            "modified": "2026-11-03T21:12:16.469Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"pedro.trabajador@pollos.com\",\r",
+                    "  \"t2\": \"Trabajador*2026\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "95406f06-0937-4d0b-8514-1846c88ea60c",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-06 Cliente visualiza productos disponibles",
+            "url": "http://localhost:3000/productos-disponibles",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2026-11-03T21:14:26.018Z",
+            "modified": "2026-11-03T21:14:26.018Z",
+            "headers": []
+        },
+        {
+            "_id": "1273502c-622e-4d94-b054-ba09cd908f9f",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-07 Cliente desactiva cuenta",
+            "url": "http://localhost:3000/desactivar-cuenta/1098765002",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2026-11-03T21:17:49.832Z",
+            "modified": "2026-11-03T21:17:49.832Z",
+            "headers": []
+        },
+        {
+            "_id": "1a6115a9-4950-4f1c-9599-d96259238902",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-08 Trabajador visualiza inventario de productos",
+            "url": "http://localhost:3000/inventario-productos",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2026-11-03T21:19:33.150Z",
+            "modified": "2026-11-03T21:19:33.150Z",
+            "headers": []
+        },
+        {
+            "_id": "cfdb322c-6788-435f-8217-11b2c0450c2e",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-09 Trabajador edita producto",
+            "url": "http://localhost:3000/editar-producto/1",
+            "method": "PUT",
+            "sortNum": 110000,
+            "created": "2026-11-03T21:21:01.929Z",
+            "modified": "2026-11-03T21:21:01.929Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"Pechuga de Pollo Fresca Especial\",\r",
+                    "  \"t2\": \"Pechuga entera limpia, sin piel y deshuesada por kg\",\r",
+                    "  \"t3\": 17500.00,\r",
+                    "  \"t4\": 70.50,\r",
+                    "  \"t5\": \"Activo\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "a799d62b-8f4e-496d-90bc-821b83b211e0",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-10 Trabajador elimina producto",
+            "url": "http://localhost:3000/eliminar-producto/3",
+            "method": "DELETE",
+            "sortNum": 120000,
+            "created": "2026-11-04T16:06:53.632Z",
+            "modified": "2026-11-04T16:06:53.633Z",
+            "headers": []
+        },
+        {
+            "_id": "8086ef7f-2762-4182-8b4d-c6b5cbd30d39",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-11 Admin edita producto",
+            "url": "http://localhost:3000/seguridad/editarProducto/2",
+            "method": "PUT",
+            "sortNum": 130000,
+            "created": "2026-11-04T16:15:17.682Z",
+            "modified": "2026-11-04T16:15:17.682Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"Pierna Pernil Seleccionada Gourmet\",\r",
+                    "  \"t2\": \"Corte fresco seleccionado de pierna pernil sin congelar por kg\",\r",
+                    "  \"t3\": 12000.00,\r",
+                    "  \"t4\": 85.00,\r",
+                    "  \"t5\": \"Activo\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "a1abe066-96bf-42c1-95bf-b1171411ad91",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-12 Admin elimina producto  Método: DELETE",
+            "url": "http://localhost:3000/seguridad/eliminarProducto/2",
+            "method": "DELETE",
+            "sortNum": 140000,
+            "created": "2026-11-04T16:22:35.585Z",
+            "modified": "2026-11-04T16:22:35.585Z",
+            "headers": []
+        },
+        {
+            "_id": "cf5a3293-250f-4bdb-a99e-8c358c22f6b8",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-13.1 Admin desactiva trabajador",
+            "url": "http://localhost:3000/seguridad/desactivartrabajador/3",
+            "method": "PUT",
+            "sortNum": 150000,
+            "created": "2026-11-04T16:25:30.678Z",
+            "modified": "2026-11-04T16:25:30.678Z",
+            "headers": []
+        },
+        {
+            "_id": "7c0cabb9-1026-4a02-9943-d306a6754447",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-13.2 Admin activa trabajador",
+            "url": "http://localhost:3000/seguridad/activartrabajador/3",
+            "method": "PUT",
+            "sortNum": 160000,
+            "created": "2026-11-04T16:31:19.155Z",
+            "modified": "2026-11-04T16:31:19.155Z",
+            "headers": []
+        },
+        {
+            "_id": "63f3b14b-d105-4809-b257-b679f68d0218",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-14.1 Admin desactiva cliente",
+            "url": "http://localhost:3000/seguridad/desactivarcliente/1098765001",
+            "method": "PUT",
+            "sortNum": 170000,
+            "created": "2026-11-04T16:33:05.834Z",
+            "modified": "2026-11-04T16:33:05.834Z",
+            "headers": []
+        },
+        {
+            "_id": "9b175f37-ccff-42f6-b560-277a39a04b94",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-14.2 Admin activa cliente",
+            "url": "http://localhost:3000/seguridad/activarcliente/1098765001",
+            "method": "PUT",
+            "sortNum": 180000,
+            "created": "2026-11-04T16:34:18.177Z",
+            "modified": "2026-11-04T16:34:18.177Z",
+            "headers": []
+        },
+        {
+            "_id": "73897baf-3853-4c9a-9549-8e28f9ec35ff",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-15.1 Modificar Pedido",
+            "url": "http://localhost:3000/modificar-pedido/1",
+            "method": "PUT",
+            "sortNum": 190000,
+            "created": "2026-11-04T16:50:46.577Z",
+            "modified": "2026-11-04T16:50:46.577Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"nuevaCantidadKg\": 10.5\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "eb2a92a3-7f56-47b0-a1c9-479105525582",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-15.2 Cancelar Pedido",
+            "url": "http://localhost:3000/cancelar-pedido/1",
+            "method": "PUT",
+            "sortNum": 200000,
+            "created": "2026-11-04T16:51:44.582Z",
+            "modified": "2026-11-04T16:51:44.582Z",
+            "headers": []
+        },
+        {
+            "_id": "6bb371dc-5757-4e0c-a2d6-d821e1cbec96",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "RF-16 Admin crea Administrador",
+            "url": "http://localhost:3000/seguridad/crearAdmin",
+            "method": "POST",
+            "sortNum": 210000,
+            "created": "2026-11-04T16:54:50.913Z",
+            "modified": "2026-11-04T16:54:50.914Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"CC\",\r",
+                    "  \"t2\": \"1098765004\",\r",
+                    "  \"t3\": \"Carlos Administrador General\",\r",
+                    "  \"t4\": \"Avenida Principal Calle 50 # 12-34\",\r",
+                    "  \"t5\": \"3001234004\",\r",
+                    "  \"t6\": \"admin.carlos@pollos.com\",\r",
+                    "  \"t7\": \"AdminPollos2026*\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "5e8b05b0-9a78-4c4a-928b-c03ba37330ab",
+            "colId": "49116137-8e99-4ef1-8d42-03c914738d54",
+            "containerId": "",
+            "name": "Seguridad - Login Administrador",
+            "url": "http://localhost:3000/seguridad/loginAdmin",
+            "method": "POST",
+            "sortNum": 220000,
+            "created": "2026-11-04T16:58:42.636Z",
+            "modified": "2026-11-04T16:58:42.636Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"admin.carlos@pollos.com\",\r",
+                    "  \"t2\": \"AdminPollos2026*\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        }
+    ],
+    "ref": "f2h7S0JUvngGqmjL3WNiotbrJTYV7Tu0S1iB6kVI5GF20nMH_dhAA32wuOcwipo--7xRRbrtFi1wBIXekCSfjw"
+}

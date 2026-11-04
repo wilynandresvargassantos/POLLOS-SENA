@@ -3,9 +3,9 @@ const bcrypt = require('bcrypt');
 
 class LoginAdminModelo {
     static async buscarPorCorreo(correo) {
-        const query = 'SELECT * FROM administradores WHERE correo = ?';
+        const sql = `SELECT * FROM trabajadores WHERE correo = ? AND rol = 'Admin'`;
         try {
-            const filas = await dbService.query(query, [correo]);
+            const filas = await dbService.query(sql, [correo]);
             return filas[0] || null;
         } catch (err) {
             throw new Error(`Error al buscar administrador: ${err.message}`);

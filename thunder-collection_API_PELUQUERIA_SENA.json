@@ -1,0 +1,339 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "API_PELUQUERIA_SENA",
+    "collectionId": "04338de5-c996-464f-b345-cfb9d065d98e",
+    "dateExported": "2026-11-03T20:52:47.059Z",
+    "version": "1.4",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "cfafe3b8-1e86-44d6-b9fb-4d4d4959c9cf",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-01 Admin crea cliente",
+            "url": "http://localhost:5020/seguridad/crearCliente",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2026-11-03T19:13:14.549Z",
+            "modified": "2026-11-03T19:13:14.549Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"CC\",\r",
+                    "  \"t2\": \"1098765001\",\r",
+                    "  \"t3\": \"Cliente Registrado Admin\",\r",
+                    "  \"t4\": \"Calle 10 # 20-30\",\r",
+                    "  \"t5\": \"3112223344\",\r",
+                    "  \"t6\": \"cliente1.pelu@gmail.com\",\r",
+                    "  \"t7\": \"ClienteSeguro2026*\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "e9703579-be46-4f88-8b22-583bf00fd9cd",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-02: Cliente crea su cuenta (Auto-registro)",
+            "url": "http://localhost:5020/registro-cliente",
+            "method": "POST",
+            "sortNum": 40000,
+            "created": "2026-11-03T19:14:31.602Z",
+            "modified": "2026-11-03T19:14:31.602Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"CC\",\r",
+                    "  \"t2\": \"1098765088\",\r",
+                    "  \"t3\": \"Cliente Autoregistro\",\r",
+                    "  \"t4\": \"3154445566\",\r",
+                    "  \"t5\": \"cliente_nuevo@gmail.com\",\r",
+                    "  \"t6\": \"AutoReg2026*\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "4f804358-b0bd-4e78-b7fb-e1fd405fb2a4",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-03 Login Cliente",
+            "url": "http://localhost:5020/login-cliente",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2026-11-03T19:26:52.922Z",
+            "modified": "2026-11-03T19:26:52.922Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"cliente_nuevo@gmail.com\",\r",
+                    "  \"t2\": \"AutoReg2026*\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "1be5002e-8681-4e02-9a54-ab3aec76389e",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-04 Admin crea Trabajador",
+            "url": "http://localhost:5020/seguridad/crearTrabajador",
+            "method": "POST",
+            "sortNum": 60000,
+            "created": "2026-11-03T19:29:56.478Z",
+            "modified": "2026-11-03T19:29:56.478Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"CC\",\r",
+                    "  \"t2\": \"1098765004\",\r",
+                    "  \"t3\": \"David Fernando Estilista\",\r",
+                    "  \"t4\": \"Avenida 30 # 10-25\",\r",
+                    "  \"t5\": \"3127778899\",\r",
+                    "  \"t6\": \"david.barbero@gmail.com\",\r",
+                    "  \"t7\": \"BarberoPass2026*\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "6c2f08b4-43b2-49ad-8164-ebbd3737557c",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-05 Login Trabajador",
+            "url": "http://localhost:5020/login-trabajador",
+            "method": "POST",
+            "sortNum": 70000,
+            "created": "2026-11-03T19:31:04.226Z",
+            "modified": "2026-11-03T19:31:04.226Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"david.barbero@gmail.com\",\r",
+                    "  \"t2\": \"BarberoPass2026*\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "38d97628-43db-49ed-84cf-3634aa03d239",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-06 Cliente visualiza horarios disponibles",
+            "url": "http://localhost:5020/horarios-disponibles",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2026-11-03T19:32:43.115Z",
+            "modified": "2026-11-03T19:32:43.115Z",
+            "headers": []
+        },
+        {
+            "_id": "93928710-8229-4a70-9559-c3bb3e6c3815",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-07 Cliente desactiva su cuenta",
+            "url": "http://localhost:5020/desactivar-cuenta/1098765088",
+            "method": "PUT",
+            "sortNum": 90000,
+            "created": "2026-11-03T19:34:28.371Z",
+            "modified": "2026-11-03T19:34:28.371Z",
+            "headers": []
+        },
+        {
+            "_id": "f53d743d-db3d-43cd-a71a-41d7a66ca538",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-08 Trabajador visualiza su horario",
+            "url": "http://localhost:5020/mi-horario/1",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2026-11-03T19:46:31.716Z",
+            "modified": "2026-11-03T19:46:31.716Z",
+            "headers": []
+        },
+        {
+            "_id": "d791a487-7d39-491f-a4be-100c6b41c2d5",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-10 Trabajador elimina horario",
+            "url": "http://localhost:5020/eliminar-horario/13",
+            "method": "DELETE",
+            "sortNum": 110000,
+            "created": "2026-11-03T19:48:47.011Z",
+            "modified": "2026-11-03T19:48:47.011Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"2026-10-10\",\r",
+                    "  \"t2\": \"5:30 pm\",\r",
+                    "  \"t3\": \"6:30 pm\",\r",
+                    "  \"t4\": \"Activo\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "723c232b-0856-4dc3-a27f-0163b54f0026",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-11 Admin edita horario",
+            "url": "http://localhost:5020/seguridad/editarHorario/11",
+            "method": "PUT",
+            "sortNum": 120000,
+            "created": "2026-11-03T20:04:37.882Z",
+            "modified": "2026-11-03T20:04:37.883Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"2026-10-10\",\r",
+                    "  \"t2\": \"6:00 pm\",\r",
+                    "  \"t3\": \"7:30 pm\",\r",
+                    "  \"t4\": \"Activo\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "66bbf0bb-82f5-4c38-a141-259b02776841",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-12 Admin elimina horario",
+            "url": "http://localhost:5020/seguridad/eliminarHorario/11",
+            "method": "DELETE",
+            "sortNum": 130000,
+            "created": "2026-11-03T20:06:48.235Z",
+            "modified": "2026-11-03T20:06:48.235Z",
+            "headers": []
+        },
+        {
+            "_id": "95047381-b2ad-43b6-8ea1-708a44b488cb",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-13.1 Admin desactiva Trabajador",
+            "url": "http://localhost:5020/seguridad/desactivartrabajador/6",
+            "method": "PUT",
+            "sortNum": 140000,
+            "created": "2026-11-03T20:10:03.940Z",
+            "modified": "2026-11-03T20:10:03.940Z",
+            "headers": []
+        },
+        {
+            "_id": "21216d8e-8b2d-41d9-814b-da3a9ffbf681",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-13.2 Admin activa Trabajador",
+            "url": "http://localhost:5020/seguridad/activartrabajador/6",
+            "method": "PUT",
+            "sortNum": 150000,
+            "created": "2026-11-03T20:11:09.818Z",
+            "modified": "2026-11-03T20:11:09.818Z",
+            "headers": []
+        },
+        {
+            "_id": "93878fdb-6f16-484e-b444-a30a3e93351b",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-14.1 Admin desactiva Cliente",
+            "url": "http://localhost:5020/seguridad/desactivarcliente/1098765088",
+            "method": "PUT",
+            "sortNum": 160000,
+            "created": "2026-11-03T20:12:43.337Z",
+            "modified": "2026-11-03T20:12:43.337Z",
+            "headers": []
+        },
+        {
+            "_id": "5a1a8be2-404f-4f62-a76d-886e179926e6",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-14.2 Admin activa Cliente",
+            "url": "http://localhost:5020/seguridad/activarcliente/1098765088",
+            "method": "PUT",
+            "sortNum": 170000,
+            "created": "2026-11-03T20:13:44.546Z",
+            "modified": "2026-11-03T20:13:44.546Z",
+            "headers": []
+        },
+        {
+            "_id": "bd9d05a0-2121-4057-96ce-9bbfa6f9478c",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-15.1 Cliente reprograma cita",
+            "url": "http://localhost:5020/reprogramar-cita/9",
+            "method": "PUT",
+            "sortNum": 180000,
+            "created": "2026-11-03T20:20:45.867Z",
+            "modified": "2026-11-03T20:20:45.867Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"nuevoIdHorario\": 10\r",
+                    "}"
+                ],
+                "form": []
+            }
+        },
+        {
+            "_id": "effef23d-547e-42c4-90d1-c1b585bb571c",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-15.2 Cliente cancela cita",
+            "url": "http://localhost:5020/cancelar-cita/9",
+            "method": "PUT",
+            "sortNum": 190000,
+            "created": "2026-11-03T20:21:44.044Z",
+            "modified": "2026-11-03T20:21:44.044Z",
+            "headers": []
+        },
+        {
+            "_id": "572c695a-e194-4fed-8cd5-4227df073439",
+            "colId": "04338de5-c996-464f-b345-cfb9d065d98e",
+            "containerId": "",
+            "name": "RF-16 Admin crea Admin",
+            "url": "http://localhost:5020/seguridad/crearAdmin",
+            "method": "POST",
+            "sortNum": 200000,
+            "created": "2026-11-03T20:27:07.025Z",
+            "modified": "2026-11-03T20:27:07.025Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": [
+                    "{\r",
+                    "  \"t1\": \"CC\",\r",
+                    "  \"t2\": \"1098765999\",\r",
+                    "  \"t3\": \"Carlos Administrador Principal\",\r",
+                    "  \"t4\": \"Calle 45 # 12-34\",\r",
+                    "  \"t5\": \"3109998877\",\r",
+                    "  \"t6\": \"admin_carlos@peluqueria.com\",\r",
+                    "  \"t7\": \"AdminClave*2026\"\r",
+                    "}"
+                ],
+                "form": []
+            }
+        }
+    ],
+    "ref": "CYLXmccEzYU5I32udmKT8vcD9th0nj__ubHpRaLrVPX80LXAJQITbYphrfdFYmta83mapWuPs0ycWbRbHPKQMQ"
+}
